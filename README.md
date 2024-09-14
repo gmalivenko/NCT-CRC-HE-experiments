@@ -11,26 +11,31 @@ This repository provides the implementation of further improvement of the Effici
 Visualization of normalized H&E stained image patches from the NCT-CRC-HE-100K dataset. The images were sampled randomly for each of 9 tissue classes.
 
 
-### 2. Prerequisites
+### 2. Jupyter notebooks
+
+Please, check `notebooks/` directory to find the dataset analysis scripts / notebooks. 
+
+
+### 3. Prerequisites
 
 - Python: torch, timm, scipy, numpy, opencv packages
 - NVidia GPU
 
 
-### 3. Data
+### 4. Data
 
 1. Download the [CRC-VAL-HE-7K](https://zenodo.org/records/1214456) dataset and extract it to the ``data`` directory.
 2. Download the [NCT-CRC-HE-100K](https://zenodo.org/records/1214456) (the same page) dataset and extract it to the ``data`` directory.
 
 
-### 4. Training
+### 5. Training
 
 Use `scripts/train_model.py` to train EfficientNet-B0 (avg) model. To train EfficientNet-B0 (max) model, change `GLOBAL_POOL` to `max`, in the `scripts/train_model.py`.
 
 Pretrained weights will be available at `releases` page.
 
 
-### 5. Results
+### 6. Results
 
 | Model                                              | Accuracy | 
 |----------------------------------------------------|----------|
@@ -39,7 +44,7 @@ Pretrained weights will be available at `releases` page.
 | Ensemble of 2×EfficientNet-B0 models (this repo)   | 98.33%   |
 
 
-#### 6. License
+#### 7. License
 
 Copyright (C) 2024 Andrey Ignatov, Grigory Malivenko. All rights reserved.
 
@@ -48,14 +53,14 @@ Licensed under the [CC BY-NC-SA 4.0 (Attribution-NonCommercial-ShareAlike 4.0 In
 The code is released for academic research use only.
 
 
-#### 7. Citation
+#### 8. Citation
 
 ```
 ...
 ```
 
 
-#### 8. Any further questions?
+#### 9. Any further questions?
 
 ```
 Please contact Andrey Ignatov (andrey@vision.ee.ethz.ch) for more information
