@@ -1,10 +1,10 @@
 # NCT-CRC-HE-experiments
 
-### 1. Overview [[Paper (in progress)]]()
+### 1. Overview (abstract) [[Paper (in progress)]]()
 
 Numerous deep learning-based solutions have been proposed for histopathological image analysis over the past years. While they usually demonstrate exceptionally high accuracy, one key question is whether their precision might be affected by low-level image properties not related to histopathology but caused by microscopy image handling and pre-processing. In this paper, we analyze a popular NCT-CRC-HE-100K colorectal cancer dataset used in numerous prior works and show that both this dataset and the obtained results may be affected by data-specific biases. The most prominent revealed dataset issues are inappropriate color normalization, severe JPEG artifacts inconsistent between different classes, and completely corrupted tissue samples resulting from incorrect image dynamic range handling. We show that even the simplest model using only 3 features per image (red, green and blue color intensities) can demonstrate over 50% accuracy on this 9-class dataset, while using color histogram not explicitly capturing cell morphology features yields over 82% accuracy. Moreover, we show that a basic EfficientNet-B0 ImageNet pretrained model can achieve over 97.7% accuracy on this dataset, outperforming all previously proposed solutions developed for this task, including dedicated foundation histopathological models and large cell morphology-aware neural networks. The NCT-CRC-HE dataset is publicly available and can be freely used to replicate the presented results. 
 
-This repository provides the implementation of further improvement of the EfficientNet-based solution originally presented in [this paper (in progress)]() and the dataset analysis tools. 
+This repository provides the implementation of the EfficientNet-based solution originally presented in [this paper (in progress)]() and the dataset analysis tools. 
 
 
 ![NCT-CRCHE-100K](./images/NCT-CRCHE-100K.jpg)
@@ -25,7 +25,7 @@ Please, check `notebooks/` directory to find the dataset analysis scripts / note
 ### 4. Data
 
 1. Download the [CRC-VAL-HE-7K](https://zenodo.org/records/1214456) dataset and extract it to the ``data`` directory.
-2. Download the [NCT-CRC-HE-100K](https://zenodo.org/records/1214456) (the same page) dataset and extract it to the ``data`` directory.
+2. (the same page) Download the [NCT-CRC-HE-100K](https://zenodo.org/records/1214456) dataset and extract it to the ``data`` directory.
 
 
 ### 5. Training
